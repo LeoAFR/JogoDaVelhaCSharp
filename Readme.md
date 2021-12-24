@@ -1,6 +1,5 @@
 # CSharp_Jogo_da_Velha_Console_Application
 
-Jogo da Velha em C# Windows Console
 
 - Nº de jogadores: 2;
 - A aplicação inicia com uma breve introdução sobre como o jogo vai funcionar;
