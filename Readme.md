@@ -1,5 +1,4 @@
 # CSharp_Jogo_da_Velha_Console_Application
-C#: Jogo da Velha Console Application
 
 Jogo da Velha em C# Windows Console
 
