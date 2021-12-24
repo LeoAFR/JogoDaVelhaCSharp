@@ -116,24 +116,24 @@ namespace JogoDaVelha
         }
 
         #region EventosDoJogo
-        private void ProcessaJogo(string jogar, Jogador jogador)
+        private void ProcessaJogo(string jogada, Jogador jogador)
         {
-            int row;
-            int col;
+            int linha;
+            int coluna;
 
             try
             {
-                if (!int.TryParse(jogar.Substring(0, 1), out row) || !int.TryParse(jogar.Substring(1, 1), out col))
+                if (!int.TryParse(jogada.Substring(0, 1), out linha) || !int.TryParse(jogada.Substring(1, 1), out coluna))
                 {
                     throw new TrataErros("A jogada fornecida é inválida");
                 }
 
-                if (row < 0 || row > 2 || col < 0 || col > 2)
+                if (linha < 0 || linha > 2 || coluna < 0 || coluna > 2)
                 {
-                    throw new TrataErros("Os índices utilizados estão fora do intervalo permitido");
+                    throw new TrataErros("O campo informado não é válido, observe o tabuleiro e informe um número disponível.");
                 }
 
-                jogador.Jogar(tabuleiro, row, col);
+                jogador.Jogar(tabuleiro, linha, coluna);
             }
             catch (ArgumentOutOfRangeException e)
             {
